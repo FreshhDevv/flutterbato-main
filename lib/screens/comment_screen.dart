@@ -15,7 +15,7 @@ class CommentScreen extends StatefulWidget {
 
   final int? postId;
 
-  CommentScreen({this.postId});
+  const CommentScreen({this.postId});
 
   @override
   State<CommentScreen> createState() => _CommentScreenState();
