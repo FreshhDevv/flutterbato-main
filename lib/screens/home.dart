@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
           )));
 
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(

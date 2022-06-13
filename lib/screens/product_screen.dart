@@ -135,8 +135,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                 ],
                               ),
                             ),
-                            post.user!.id == userId
-                                ? PopupMenuButton(
+                            if (post.user!.id == userId) PopupMenuButton(
                                     child: Padding(
                                       padding: EdgeInsets.only(right: 10),
                                       child: Icon(
@@ -150,7 +149,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                             value: 'edit',
                                           ),
                                           PopupMenuItem(
-                                            child: Text('Delete'),
+                                            child: const Text('Delete'),
                                             value: 'delete',
                                           )
                                         ],
@@ -168,8 +167,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                         _handleDeletePost(post.id ?? 0);
                                       }
                                     }
-                                    )
-                                : SizedBox()
+                                    ) else const SizedBox()
                           ],
                         ),
                         SizedBox(
