@@ -1,8 +1,6 @@
 import 'package:batoflutter/models/api_response.dart';
 import 'package:batoflutter/models/comment.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import '../constant.dart';
@@ -90,6 +88,7 @@ class _CommentScreenState extends State<CommentScreen> {
                 (route) => false)
           });
     } else {
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('${response.error}')));
     }
@@ -127,7 +126,7 @@ class _CommentScreenState extends State<CommentScreen> {
         ),
         body: _loading
             ? Center(
-                child: CircularProgressIndicator(),
+                child: const CircularProgressIndicator(),
               )
             : Column(children: [
                 Expanded(
@@ -192,7 +191,7 @@ class _CommentScreenState extends State<CommentScreen> {
                                             ),
                                             itemBuilder: (context) => [
                                                   PopupMenuItem(
-                                                    child: Text('Edit'),
+                                                    child: const Text('Edit'),
                                                     value: 'edit',
                                                   ),
                                                   PopupMenuItem(

@@ -53,7 +53,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Register'),
+        title: const Text('Register'),
         centerTitle: true,
       ),
       body: Form(
@@ -66,28 +66,28 @@ class _RegisterState extends State<Register> {
               validator: (val) => val!.isEmpty ? 'Invalid name' : null,
               decoration: kInputDecoration('Name')
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextFormField(
               controller: emailController,
               keyboardType: TextInputType.emailAddress,
               validator: (val) => val!.isEmpty ? 'Invalid email address' : null,
               decoration: kInputDecoration('Email')
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextFormField(
               controller: passwordController,
               obscureText: true,
               validator: (val) => val!.length < 8 ? 'Requires at least 8 chars' : null,
               decoration: kInputDecoration('Password')
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextFormField(
               controller: passwordConfirmationController,
               obscureText: true,
               validator: (val) => val != passwordController.text ? 'Confirm password does not match' : null,
               decoration: kInputDecoration('Confirm password')
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             loading ? 
               Center(child: CircularProgressIndicator())
             : kTextButton('Register', () {
