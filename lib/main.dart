@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BuildContext, Key, MaterialApp, StatelessWidget, Widget, runApp;
 
 import 'screens/loading.dart';
 
