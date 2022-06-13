@@ -45,6 +45,7 @@ class _CommentScreenState extends State<CommentScreen> {
                 (route) => false)
           });
     } else {
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text('${response.error}')));
     }
